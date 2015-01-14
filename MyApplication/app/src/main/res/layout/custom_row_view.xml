@@ -5,6 +5,7 @@
     android:layout_height="fill_parent"
     android:orientation="vertical">
 
+
     <EditText android:id="@+id/text1"
         android:textSize="24sp"
         android:textStyle="bold"
@@ -12,23 +13,23 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:background="@android:color/transparent"/>
-    <!--<TextView android:id="@+id/text2"-->
-        <!--android:textSize="12sp"-->
-        <!--android:textStyle="bold"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="fill_parent"/>-->
-    <!--<TextView android:id="@+id/text3"-->
-        <!--android:typeface="sans"-->
-        <!--android:textSize="14sp"-->
-        <!--android:textStyle="italic"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"/>-->
 
-    <Button android:id="@+id/text4"
+    <Button android:id="@+id/text5"
         android:textSize="14sp"
+        android:text="add date"
         android:textColor="#ffe1e1e1"
         android:background="#ffb62c17"
         android:onClick="addDateButton"
         android:layout_width="wrap_content"
-        android:layout_height="fill_parent" />
+        android:layout_height="wrap_content" />
+
+    <Button android:id="@+id/deleteBtn"
+        android:textSize="14sp"
+        android:text="delete note"
+        android:textColor="#ffe1e1e1"
+        android:background="#ffb62c17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
 </LinearLayout>

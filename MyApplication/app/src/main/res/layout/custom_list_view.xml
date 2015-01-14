@@ -8,21 +8,15 @@
     <Button android:id="@+id/add_note"
         android:text="NEW NOTE"
         android:onClick="btnOnClick"
-        android:layout_width="fill_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
-    <ListView android:id="@id/android:list"
+    <ListView android:id="@+id/listView_a"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:background="#ffff3b20"
         android:layout_weight="2"
-        android:drawSelectorOnTop="false">
-    </ListView>
+        android:drawSelectorOnTop="false" />
 
-    <TextView  android:id="@id/android:empty"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:background="#ffe7c5ff"
-        android:text="No data"
-        />
+
 </LinearLayout>
