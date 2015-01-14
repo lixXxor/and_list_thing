@@ -1,6 +1,8 @@
 package com.example.project.project;
 
+import android.app.AlertDialog;
 import android.app.ListActivity;
+import android.content.DialogInterface;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.text.Editable;
@@ -18,6 +20,7 @@ import android.widget.EditText;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.app.Activity;
 
@@ -36,7 +39,7 @@ public class MainActivity extends Activity {
     /** Called when the activity is first created. */
 
     private ListView lstView;
-    private EditText edtText;
+    private TextView edtView;
     private SimpleAdapter simpAdapter;
     private myListAdapter listAdapter;
     static List<String> list = new ArrayList<String>();
@@ -51,7 +54,7 @@ public class MainActivity extends Activity {
 
     private void setUpView(){
         lstView = (ListView)findViewById(R.id.listView_a);
-        edtText = (EditText)findViewById(R.id.text1);
+        edtView = (TextView)findViewById(R.id.text1);
 
         list.clear();
         //populateList();
@@ -66,18 +69,6 @@ public class MainActivity extends Activity {
 //            }
 //        });
 
-        lstView.setOnItemClickListener(new OnItemClickListener() {
-            public void onItemClick(AdapterView<?> parent, View view,
-                                    int position, long id) {
-
-                // selected item
-                String selected = edtText.getText().toString();
-
-                Toast toast=Toast.makeText(getApplicationContext(), selected, Toast.LENGTH_SHORT);
-                toast.show();
-
-            }
-        });
 
     }
 
@@ -113,6 +104,24 @@ public class MainActivity extends Activity {
         //want to add to the top
 
         list.add(0,"");
+        final EditText edtText = new EditText(this);
+        edtText.setText(list.get(0));
+        new AlertDialog.Builder(this)
+                .setTitle("New Note")
+                .setMessage("Write a note")
+                .setView(edtText)
+                .setPositiveButton("Add Note", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int whichButton) {
+                        String newName = edtText.getText().toString();
+                        list.set(0, newName);
+                        listAdapter.notifyDataSetChanged();
+                    }
+                })
+                .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int whichButton) {
+                    }
+                })
+                .show();
         listAdapter.notifyDataSetChanged();
         //EditText theText = (EditText)findViewById(R.id.text1);
         //theText.requestFocus();
