@@ -61,7 +61,7 @@ public class myListAdapter extends ArrayAdapter<String>
             EditText edt = (EditText)v.findViewById(R.id.text1);
             if(position == 0)
                 edt.requestFocus();
-            
+
             btnDeleteNote.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
