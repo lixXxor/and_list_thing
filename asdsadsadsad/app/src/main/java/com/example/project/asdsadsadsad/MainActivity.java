@@ -1,5 +1,4 @@
-package com.example.project.project;
-
+package com.example.project.asdsadsadsad;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -14,10 +13,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ViewSwitcher;
 
-
 import java.util.Calendar;
 
-public class CalenderDesign extends Activity implements ViewSwitcher.ViewFactory {
+
+public class MainActivity extends Activity implements ViewSwitcher.ViewFactory {
 
     private Button btnPicDateTime;
     private TextSwitcher DaySwitcher, MonthSwitcher, YearSwitcher;

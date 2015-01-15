@@ -17,6 +17,7 @@ import android.view.MenuItem;
 
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -55,6 +56,7 @@ public class MainActivity extends Activity {
     private ListView lstView;
     private TextView edtView;
     private EditText txtDate;
+    EditText edit_text;
     private Button btnDate;
     private myListAdapter listAdapter;
     private myListAdapterHash listAdapterHash;
@@ -72,6 +74,7 @@ public class MainActivity extends Activity {
     private void setUpView() {
         lstView = (ListView) findViewById(R.id.listView_a);
         edtView = (TextView) findViewById(R.id.text1);
+
 
         list.clear();
         //populateList();
@@ -209,4 +212,5 @@ public class MainActivity extends Activity {
 
         listAdapter.notifyDataSetChanged();
     }
+
 }
