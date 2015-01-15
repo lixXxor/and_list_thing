@@ -23,6 +23,7 @@ import android.widget.ListAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.HashMap;
 import java.util.List;
@@ -30,23 +31,24 @@ import java.util.List;
 /**
  * Created by gzaphf on 14/01/15.
  */
-public class myListAdapter extends ArrayAdapter<String>
+public class myListAdapterHash extends ArrayAdapter<HashMap<String, String>>
 
 {
 
-    private List<String> myItems;
+    ArrayList<HashMap<String, String>> myItems;
     private int myResource;
 
 
 
-    public myListAdapter(Context context, int resource) {
+    public myListAdapterHash(Context context, int resource) {
         super(context, resource);
         myResource = resource;
     }
 
-    public myListAdapter(Context context, int resource, List<String> items){
+    public myListAdapterHash(Context context, int resource, ArrayList<HashMap<String,String>> items){
         super(context, resource, items);
-        myItems = items;
+        //notes
+        this.myItems = items;
         myResource = resource;
     }
 
@@ -63,7 +65,10 @@ public class myListAdapter extends ArrayAdapter<String>
 
         }
 
-        String p = myItems.get(position);
+        final HashMap<String, String> p = myItems.get(position);
+      //  myItems.get(;
+
+
         Button btnDeleteNote = (Button)v.findViewById(R.id.deleteBtn);
         Button btnAddDate = (Button)v.findViewById(R.id.dateBtn);
 
@@ -89,7 +94,7 @@ public class myListAdapter extends ArrayAdapter<String>
                 @Override
                 public void onClick(View v) {
                     final EditText edtText = new EditText(getContext());
-                    edtText.setText(myItems.get(position));
+                    edtText.setText(myItems.get(position).toString());
                     Log.d("SDADASDAS", "" + position);
 
                     //getting dialog_create_note
@@ -106,13 +111,13 @@ public class myListAdapter extends ArrayAdapter<String>
 
 
                     alertDialogBuilder
-         //                   .setTitle("New Note")
-         //                   .setMessage("Write a note")
-         //                   .setView(edtText)
+                            //                   .setTitle("New Note")
+                            //                   .setMessage("Write a note")
+                            //                   .setView(edtText)
                             .setPositiveButton("Add Note", new DialogInterface.OnClickListener() {
                                 public void onClick(DialogInterface dialog, int whichButton) {
                                     String newName = edtDialog.getText().toString();
-                                    myItems.set(position, newName);
+                                   // myItems.set(myItems.get(position),);
                                     notifyDataSetChanged();
                                 }
                             })
@@ -155,7 +160,7 @@ public class myListAdapter extends ArrayAdapter<String>
             });
 
 
-            edt.setText(p);
+            //edt.setText(p);
 
 
 //
@@ -170,7 +175,7 @@ public class myListAdapter extends ArrayAdapter<String>
 //            });
 
 
-            }
+        }
 
         return v;
     }

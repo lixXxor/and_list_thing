@@ -14,7 +14,7 @@
     <ListView android:id="@+id/listView_a"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:background="#ffff3b20"
+        android:background="@color/lightRed"
         android:layout_weight="2"
         android:drawSelectorOnTop="false" />
 
