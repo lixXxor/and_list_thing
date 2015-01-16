@@ -3,13 +3,13 @@
     android:orientation="vertical"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:background="#ffb62c17">
+    android:background="@color/lightRed">
 
     <EditText
         android:id="@+id/dialogEditText"
         android:textSize="24sp"
         android:textStyle="bold"
-        android:textColor="#ffffffff"
+        android:textColor="@color/lightWhite"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:background="@android:color/transparent"/>

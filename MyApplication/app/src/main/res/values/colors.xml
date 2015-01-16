@@ -3,8 +3,8 @@
 
 <resources>
 
-    <color name="darkRed">#B62C17</color>
-    <color name="lightRed">#FF3B20</color>
+    <color name="darkRed">#ff460300</color>
+    <color name="lightRed">#ff920800</color>
     <color name="lightWhite">#E1E1E1</color>
 
 

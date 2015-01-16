@@ -14,22 +14,32 @@
         android:layout_height="fill_parent"
         android:background="@android:color/transparent"/>
 
-    <Button android:id="@+id/dateBtn"
-        android:textSize="14sp"
-        android:text="add reminder"
-        android:textColor="@color/lightWhite"
-        android:background="@color/darkRed"
-        android:onClick="addDateButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
-    <Button android:id="@+id/deleteBtn"
-        android:textSize="14sp"
-        android:text="delete note"
-        android:textColor="@color/lightWhite"
-        android:background="@color/darkRed"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        <Button android:id="@+id/dateBtn"
+            android:textSize="14sp"
+            android:text="add reminder"
+            android:textColor="@color/lightWhite"
+            android:background="@null"
+            android:layout_gravity="left"
+            android:onClick="addDateButton"
+            android:paddingLeft="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button android:id="@+id/deleteBtn"
+            android:textSize="14sp"
+            android:text="delete note"
+            android:textColor="@color/lightWhite"
+            android:background="@null"
+            android:layout_gravity="right"
+            android:paddingRight="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        </FrameLayout>
 
 
 </LinearLayout>

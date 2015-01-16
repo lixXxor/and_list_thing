@@ -106,9 +106,6 @@ public class myListAdapter extends ArrayAdapter<String>
 
 
                     alertDialogBuilder
-         //                   .setTitle("New Note")
-         //                   .setMessage("Write a note")
-         //                   .setView(edtText)
                             .setPositiveButton("Add Note", new DialogInterface.OnClickListener() {
                                 public void onClick(DialogInterface dialog, int whichButton) {
                                     String newName = edtDialog.getText().toString();
@@ -124,24 +121,6 @@ public class myListAdapter extends ArrayAdapter<String>
                 }
             });
 
-//            final TextWatcher tw = new TextWatcher() {
-//                @Override
-//                public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-//
-//                }
-//
-//                @Override
-//                public void onTextChanged(CharSequence s, int start, int before, int count) {
-//
-//                }
-//
-//                @Override
-//                public void afterTextChanged(Editable s) {
-//                    Log.d("position after: ", ""+position);
-//                    myItems.set(position, s.toString());
-//                }
-//            };
-
             btnDeleteNote.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -156,19 +135,6 @@ public class myListAdapter extends ArrayAdapter<String>
 
 
             edt.setText(p);
-
-
-//
-//            edt.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-//                @Override
-//                public void onFocusChange(View v, boolean hasFocus) {
-//                    if (!hasFocus){
-//                        final EditText editT = (EditText) v;
-//                        myItems.set(position, editT.getText().toString());
-//                    }
-//                }
-//            });
-
 
             }
 

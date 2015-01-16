@@ -4,14 +4,17 @@
     android:layout_height="wrap_content"
     android:layout_centerInParent="true"
     android:layout_margin="25dp"
+    android:background="@color/lightRed"
     android:gravity="center_horizontal"
     android:orientation="vertical"
     android:padding="0.70dp"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
         android:baselineAligned="false"
         android:orientation="horizontal" >
 
@@ -22,113 +25,131 @@
             android:gravity="center_horizontal"
             android:orientation="vertical"
             android:paddingBottom="5dp"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
             android:paddingTop="5dp" >
 
             <ImageView
-                android:id="@+id/dayP"
+                android:id="@+id/plus_a_year"
                 android:layout_width="match_parent"
-                android:layout_height="40dp"/>
+                android:layout_height="10dp"
+                android:src="@drawable/arrowup" />
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="1dp" />
-
-            <TextSwitcher
-                android:id="@+id/DaySwitcher"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="10dp" >
-            </TextSwitcher>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"/>
-
-            <ImageView
-                android:id="@+id/dayM"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center_horizontal"
-            android:orientation="vertical"
-            android:paddingBottom="5dp"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
-            android:paddingTop="5dp" >
-
-            <ImageView
-                android:id="@+id/monthP"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"/>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp" />
-
-            <TextSwitcher
-                android:id="@+id/MonthSwitcher"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="10dp" >
-            </TextSwitcher>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp" />
-
-            <ImageView
-                android:id="@+id/monthM"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center_horizontal"
-            android:orientation="vertical"
-            android:paddingBottom="5dp"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
-            android:paddingTop="5dp" >
-
-            <ImageView
-                android:id="@+id/yearP"
-                android:layout_width="match_parent"
-                android:layout_height="40dp" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp" />
+                android:layout_height="1dp"
+                android:background="@android:color/transparent"  />
 
             <TextSwitcher
                 android:id="@+id/YearSwitcher"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="10dp" >
             </TextSwitcher>
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="1dp"/>
+                android:layout_height="1dp"
+                android:background="@android:color/transparent"  />
 
             <ImageView
-                android:id="@+id/yearM"
+                android:id="@+id/minus_a_year"
                 android:layout_width="match_parent"
-                android:layout_height="40dp" />
+                android:layout_height="10dp"
+                android:src="@drawable/arrowdown" />
         </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingBottom="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="5dp" >
+
+            <ImageView
+                android:id="@+id/plus_a_month"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:src="@drawable/arrowup" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/transparent"  />
+
+            <TextSwitcher
+                android:id="@+id/MonthSwitcher"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp" >
+            </TextSwitcher>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/transparent"  />
+
+            <ImageView
+                android:id="@+id/minus_a_month"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:src="@drawable/arrowdown" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingBottom="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="5dp" >
+
+            <ImageView
+                android:id="@+id/plus_a_day"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:src="@drawable/arrowup" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/transparent"  />
+
+            <TextSwitcher
+                android:id="@+id/DaySwitcher"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp" >
+            </TextSwitcher>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/transparent"  />
+
+            <ImageView
+                android:id="@+id/minus_a_day"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:src="@drawable/arrowdown" />
+        </LinearLayout>
+
+
+
     </LinearLayout>
 
-    <Button
-        android:id="@+id/btnPicDateTime"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"/>
+    <!--<Button-->
+        <!--android:id="@+id/btnAddDate"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:background="@android:color/transparent"-->
+        <!--android:textColor="@android:color/white"-->
+        <!--android:text="Add Date" />-->
 </LinearLayout>
